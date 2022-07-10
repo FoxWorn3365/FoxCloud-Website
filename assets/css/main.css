@@ -1,0 +1,28 @@
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+.presentImageLeft {
+    float: left;
+    padding: 20px;
+    position: background;
+    width: 380px;
+    height: 225px;
+    bottom: 50px;
+    border-radius: 50px;
+}
+
+.presentImageRight {
+    float: right;
+    padding: 20px;
+    position: background;
+    width: 380px;
+    height: 225px;
+    bottom: 50px;
+    border-radius: 50px;
+}
