@@ -1,0 +1,14 @@
+whoah il pannello admin!{}FoxWorn3365{}1657479225{}
+Finalmente il pannello admin è stato creato :D<br>
+Finalmente tutta la parte della documentazione riguardante la creazione, gestione ed eliminazione<br>
+di un utente potrà essere <s>eliminata</s> convertita in spiegazioni sul pannello!<br>
+Da quel pannello si potranno anche bannare gli utenti, ovvero impedire l'accesso mantenendo però<br>
+i file sul cloud, con la possibilità di revocare il ban! Fantastico no?
+Ora 5 minuti di silenzio per la stringa di codice errato che mi ha distrutto il cloud:<br>
+<pre style='background-color: gray; border: solid 6px gray; border-radius: 20px; color: white; text-align: left;width: 75%'>
+$config = json_decode(file_get_contents('protected/users/' . $us . '/userinfo.conf'));
+if (!empty($config->dir)) {
+  rrmdir('protected/disk/' . $dir . '/');
+}
+</pre>
+Essendo che $dir non esiste (doveva essere $config->dir) mi ha eliminato la cartella dei dischi :(<br>
