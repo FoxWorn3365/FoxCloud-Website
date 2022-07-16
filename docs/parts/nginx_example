@@ -1,0 +1,41 @@
+server {
+
+        root /var/www/cloud;
+        index index.php;
+
+        server_name cloud.fcosma.it;
+
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/run/php/php8.0-fpm.sock;
+    }
+
+    location / {
+        try_files $uri $uri.html $uri/ @extensionless-php;
+        index  index.php index.html;
+    }
+
+    location /protected/ {
+        deny all;
+    }
+
+    location /u/ {
+       try_files $uri /route.php;
+    }
+
+    location /s/ {
+       try_files $uri /route.php;
+    }
+
+    location /admin/ {
+       try_files $uri /route.php;
+    }
+
+    location ~ \.php$ {
+        try_files $uri =404;
+    }
+
+    location @extensionless-php {
+        rewrite ^(.*)$ $1.php last;
+    }
+}
