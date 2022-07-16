@@ -1,5 +1,10 @@
 <?php
 require_once("assets/header.php");
+
+if (isMobile() && !isset($_GET["okMobile"])) {
+  header("Location: https://foxcloud.fcosma.it/mobile/");
+  exit;
+}
 ?>
   <div id='top'>
    <br><br><br>
@@ -27,11 +32,23 @@ require_once("assets/header.php");
    <a id='opensource'>
     <div id='openSource'>
      <a onclick='zoomImage("cloud_sponsor_img_2.png")'><img src='https://foxcloud.fcosma.it/assets/img/cloud_sponsor_img_2.png' class='presentImageRight'></a>
-     <p style='font-size: 18px; text-align: left; position: absolute; left: 50px'><br><span style='font-size: 31px'><b>Open Source</b></span><br>Noi siamo pienamente favorevoli all'Open Source, pertanto tutto il codice che forma<br>lo scheletro di FoxCloud è presente su <a href='https://github.com/FoxWorn3365/cloud'>GitHub</a> dove non solo sarà possibile visualizzare<br>il tutto ma anche contribuire segnalando errori oppure facendo pull request se siete esperti nel campo!</p><br></p><br>
+     <p id='disc_os' style='font-size: 18px; text-align: left; position: absolute; left: 50px'><br><span style='font-size: 31px'><b>Open Source</b></span><br>Noi siamo pienamente favorevoli all'Open Source, pertanto tutto il codice che forma<br>lo scheletro di FoxCloud è presente su <a href='https://github.com/FoxWorn3365/cloud'>GitHub</a> dove non solo sarà possibile visualizzare<br>il tutto ma anche contribuire segnalando errori oppure facendo pull request se siete esperti nel campo!</p><br></p><br>
      <br><br><br>
     </div>
    </a> 
+   <div id='separatore'>
+    <br><br><br><br><br><br>
+   </div>
+   <a id='principi'>
+    <div id='principi_on'>
+     <p style='font-size: 18px; text-align: left; position: absolute; left: 50px'><br><span style='font-size: 31px'><b>Basato su princìpi <u>concreti</u></b></span><br><b>FoxCloud</b>, essendo creato e mantenuto da <a href='https://foxorg.fcosma.it/'>.FoxOrg</a>, un'organizzazione no-profit, segue i principi del mantenitore.<br>
+     I princìpi sono stati scritti in modo da ricordarci ogni giorno quale è l'obiettivo dell'organizzazione e si devo riflettere si ogni nostro progetto.<br>
+     <a href='https://foxorg.fcosma.it/#principi'>Vai ai Principi</a>
+     </p><br>
+    </div>
+   </a> 
   </div>
+  <br><br><br><br><br>
   <a id='news'>
    <div id='news' style='margin: 25px'>
     <br><br><br><br><br>
@@ -97,10 +114,10 @@ require_once("assets/header.php");
  </body>
  <footer id='footer' class='w3-black' style='background-color: black; color: white; width: 100% height: 250px;'>
   <div style='text-align: left; margin: 10px'><a href='https://foxorg.fcosma.it/'><span style='font-size: 30px'>.FoxOrg</span></a><br>&copy; 2021 - 2022 Federico Cosma (FoxWorn3365)<br><span style='font-size: 10px'>Tutti i diritti riservati</span></div><br>
-  <div id='someThings' style='position: absolute; top: 0px; right: 0px; text-align: right; margin: 10px'><a href='/chi-siamo'>Chi Siamo</a><br><a href='/progetti'>I nostri Progetti</a><br><a href='/contattaci'>Contattaci</a><br><a href='/privacy'>Privacy Policy</a>
+  <div id='someThings' style='position: absolute; top: 0px; right: 0px; text-align: right; margin: 10px'><a href='https://foxorg.fcosma.it/#org'>Chi Siamo</a><br><a href='https://foxorg.fcosma.it/progetti'>I nostri Progetti</a><br><a href='https://foxorg.fcosma.it/contattaci'>Contattaci</a><br><a href='https://foxorg.fcosma.it/privacy'>Privacy Policy</a>
  </footer>
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
  <script src='https://foxcloud.fcosma.it/assets/js/loadChart.js'></script>
+ <script src='https://foxcloud.fcosma.it/assets/js/setText.js'></script>
  <script src='https://foundation.fcosma.it/assets/js/http.js'></script>
  <script src='https://foxcloud.fcosma.it/assets/js/fetchNews.js'></script>
  <script src='https://foxcloud.fcosma.it/assets/js/zoomImage.js'></script>
