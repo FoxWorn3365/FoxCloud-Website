@@ -11,13 +11,10 @@ if (isMobile() && !isset($_GET["okMobile"])) {
    <span id='mainText' class='w3-animate-top' style='font-size: 75px'><b>FoxCloud</b></span><br>
    <span id='mainSubtitle' class='w3-animate-left' style='font-size: 25px'><br>Accedi ai tuoi file d'ovunque. Senza problemi.</span>
    <br><br><br><br><br><br>
-   <a href='#scopri' class='w3-animate-right' style='color: orange; font-size: 50px'><i class="fa-solid fa-circle-chevron-down"></i></a>
+   <a id='goAway' href='#scopri' class='w3-animate-right' style='position: relative; color: orange; font-size: 75px; margin: 10px'><i class="fa-solid fa-circle-chevron-down"></i></a>
    <br><br>
-   <hr style='width: 80%; margin: auto; height: 2px;' />
   </div>
-  <div id='separatore'>
-   <br><br><br><br>
-  </div>
+  <hr style='width: 80%; margin: auto; height: 2px;' />
   <div id='discover'>
    <a id='scopri'>
     <div id='scopriCloud'>
@@ -118,7 +115,7 @@ if (isMobile() && !isset($_GET["okMobile"])) {
  </footer>
  <script src='https://foxcloud.fcosma.it/assets/js/loadChart.js'></script>
  <script src='https://foxcloud.fcosma.it/assets/js/setText.js'></script>
- <script src='https://foundation.fcosma.it/assets/js/http.js'></script>
+ <script src='https://foxcloud.fcosma.it/assets/js/http.js'></script>
  <script src='https://foxcloud.fcosma.it/assets/js/fetchNews.js'></script>
  <script src='https://foxcloud.fcosma.it/assets/js/zoomImage.js'></script>
 </html>
